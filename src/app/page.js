@@ -1,113 +1,130 @@
+import { Bona_Nova } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
+
+const bona_Nova = Bona_Nova({ 
+  subsets: ["latin"],
+  weight: ["400","700"]
+});
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <nav className="bg-zinc-900 text-white border-b border-gray-200">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
+          <Link href="/" className="flex items-center space-x-1 rtl:space-x-reverse">
+            <Image src="https://dev.alfaprima.id/assets/img/logo/AP-W.png" width={412} height={412} className="h-12 w-12" alt="Alfa Prima Logo" />
+            <span className={`${bona_Nova.className} self-center text-2xl whitespace-nowrap`}>ALFA PRIMA</span>
+          </Link>
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <Link href="https://www.alfaprima.id/" target="_blank" className="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Kunjungi alfaprima.id</Link>
+            <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span className="sr-only">Open main menu</span>
+              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+          </div>
+          <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+              <li>
+                <a href="#" className="block font-light py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#" className="block font-light py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Report Bug</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div className="max-w-screen-xl mx-auto px-4 py-32">
+        <div className="grid grid-cols-4 gap-4">
+          <div className="max-w-sm rounded-xl">
+            <Link href="/">
+              <Image className="rounded-lg object-cover object-center" src="https://www.alfaprima.id/api-assets/uploads/DSC_07410_d502c0f9f1.JPG" width={1920} height={1080} alt="thumbnail" />
+            </Link>
+            <div className="py-5">
+              <p className="text-blue-700 font-medium text-sm">Tanggal acara :</p>
+              <p className="mb-2 text-zinc-500 text-sm">Selasa, 23 Juli 2024</p>
+              <Link href="/">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-zinc-700">Noteworthy technology acquisitions 2021</h5>
+              </Link>
+              <p className="mb-4 font-normal text-zinc-500">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+              <Link href="/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300">
+                Buka Undangan
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+          <div className="max-w-sm rounded-xl">
+            <Link href="/">
+              <Image className="rounded-lg object-cover object-center" src="https://www.alfaprima.id/api-assets/uploads/DSC_07410_d502c0f9f1.JPG" width={1920} height={1080} alt="thumbnail" />
+            </Link>
+            <div className="py-5">
+              <p className="text-blue-700 font-medium text-sm">Tanggal acara :</p>
+              <p className="mb-2 text-zinc-500 text-sm">Selasa, 23 Juli 2024</p>
+              <Link href="/">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-zinc-700">Noteworthy technology acquisitions 2021</h5>
+              </Link>
+              <p className="mb-4 font-normal text-zinc-500">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+              <Link href="/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300">
+                Buka Undangan
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+          <div className="max-w-sm rounded-xl">
+            <Link href="/">
+              <Image className="rounded-lg object-cover object-center" src="https://www.alfaprima.id/api-assets/uploads/DSC_07410_d502c0f9f1.JPG" width={1920} height={1080} alt="thumbnail" />
+            </Link>
+            <div className="py-5">
+              <p className="text-blue-700 font-medium text-sm">Tanggal acara :</p>
+              <p className="mb-2 text-zinc-500 text-sm">Selasa, 23 Juli 2024</p>
+              <Link href="/">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-zinc-700">Noteworthy technology acquisitions 2021</h5>
+              </Link>
+              <p className="mb-4 font-normal text-zinc-500">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+              <Link href="/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300">
+                Buka Undangan
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+          <div className="max-w-sm rounded-xl">
+            <Link href="/">
+              <Image className="rounded-lg object-cover object-center" src="https://www.alfaprima.id/api-assets/uploads/DSC_07410_d502c0f9f1.JPG" width={1920} height={1080} alt="thumbnail" />
+            </Link>
+            <div className="py-5">
+              <p className="text-blue-700 font-medium text-sm">Tanggal acara :</p>
+              <p className="mb-2 text-zinc-500 text-sm">Selasa, 23 Juli 2024</p>
+              <Link href="/">
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-zinc-700">Noteworthy technology acquisitions 2021</h5>
+              </Link>
+              <p className="mb-4 font-normal text-zinc-500">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+              <Link href="/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300">
+                Buka Undangan
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <footer className="p-4 bg-white border-t border-zinc-200 md:p-8 lg:p-10">
+        <div className="mx-auto max-w-screen-xl text-center">
+          <span className="text-sm text-zinc-500 sm:text-center">© {new Date().getFullYear()} Alfa Prima. All Rights Reserved.</span>
+        </div>
+      </footer>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }

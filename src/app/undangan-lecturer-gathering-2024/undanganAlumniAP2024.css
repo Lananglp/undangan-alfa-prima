@@ -1,0 +1,11 @@
+body {
+    @apply bg-white text-zinc-700;
+}
+
+.bg-primary {
+    background-color: #0f207c;
+}
+
+.bg-warning {
+    background-color: #ffb901;
+}
