@@ -139,7 +139,7 @@ function SectionUndangan({acara, tagline, description, tujuan, dressCode, tangga
                                     <div className='relative'>
                                         <p className='mb-4 leading-8'>Halo {tujuan} Kampus Alfa Prima,</p>
                                         <p className='mb-8 text-justify'>{description}</p>
-                                        <p className='mb-4'>Kegiatan ini akan dilaksanakan pada :</p>
+                                        {/* <p className='mb-4'>Adapun kegiatan Lecturer Gathering akan dilaksanakan pada :</p> */}
                                         <table className='mb-8 w-full'>
                                             <tbody>
                                                 <tr>

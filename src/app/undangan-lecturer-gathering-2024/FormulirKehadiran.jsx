@@ -141,9 +141,8 @@ function FormulirKehadiran() {
                                             <label htmlFor="kehadiran" className="block mb-2 text-sm font-medium text-zinc-800">Status kehadiran <span className='text-xs text-red-400'>*</span></label>
                                             <select {...register("kehadiran", { required: true })} id="kehadiran" name='kehadiran' className="border border-zinc-300 text-sm rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-zinc-100 text-zinc-800">
                                                 <option value="">Pilih</option>
-                                                <option value="1">Sendiri</option>
-                                                <option value="2">Sahabat</option>
-                                                <option value="3">Keluarga</option>
+                                                <option value="1">Hadir</option>
+                                                <option value="2">Tidak Hadir</option>
                                             </select>
                                             {errors.kehadiran && <p className='mt-2 text-xs text-red-400'>Bagian ini tidak boleh kosong.</p>}
                                         </div>

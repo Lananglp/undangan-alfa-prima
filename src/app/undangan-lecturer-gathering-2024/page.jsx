@@ -46,7 +46,7 @@ export const metadata = {
       //   alt: 'Alumni Alfa Prima',
       // },
       {
-        url: 'https://undangan.alfaprima.id/image/foto-bersama-dosen/bg1.jpeg', // Must be an absolute URL
+        url: 'https://undangan.alfaprima.id/images/foto-bersama-dosen/bg1.jpeg', // Must be an absolute URL
         width: 1920,
         height: 1080,
         alt: 'para Dosen Alfa Prima',
@@ -84,7 +84,7 @@ function page() {
 
   const acara = "Undangan Lecturer Gathering";
   const tagline = "Togetherness and Warmth in Your Second Home";
-  const description = "Dalam rangka mempererat hubungan dengan tenaga pengajar (dosen) dan menumbuhkan kembali rasa #yoursecondhome di lingkungan Alfa Prima maka Alfa Prima Denpasar akan melaksanakan Lecturer Gathering. Bersama undangan ini kami mengundang bapak/ibu untuk hadir dan mengisi sharing session untuk seluruh dosen.";
+  const description = "Dalam rangka mempererat hubungan dengan tenaga pengajar (dosen) dan menumbuhkan kembali rasa #yoursecondhome di lingkungan Alfa Prima maka Alfa Prima Denpasar akan melaksanakan Lecturer Gathering. Bersama undangan ini kami mengundang bapak/ibu untuk hadir dalam kegiatan yang akan dilaksanakan pada:";
   const tujuan = "Dosen";
   const tanggal = '1 Agustus 2024';
   const waktu = '17:00 WITA - Selesai';
