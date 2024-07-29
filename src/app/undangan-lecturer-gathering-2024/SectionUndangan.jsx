@@ -87,7 +87,7 @@ function SectionUndangan({acara, tagline, description, tujuan, dressCode, tangga
                             </ParallaxSection>
                         </div> */}
                         <div className='absolute -z-10 inset-x-0 top-0'>
-                            <Image src="https://daftar.alfaprima.id/img/background-alfaprima.jpg" alt='thumbnail' width={1920} height={1080} className='h-[392px] w-full object-cover bg-zinc-200' style={{objectPosition: '50% 50%'}}/>
+                            <Image src="https://daftar.alfaprima.id/img/background-alfaprima.jpg" alt='thumbnail' width={1920} height={1080} className='h-48 md:h-[392px] w-full object-cover bg-zinc-200' style={{objectPosition: '50% 50%'}}/>
                         </div>
                         <div className='mx-4 md:mx-16 lg:mx-40 xl:mx-64 pt-24'>
                             <Image src={images[0]} alt='thumbnail' width={1920} height={1080} className='aspect-video object-cover rounded-xl bg-zinc-200'/>
